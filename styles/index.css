@@ -1,0 +1,369 @@
+/* Site specific styles */
+
+/*  Base typography
+ ***************/
+
+html {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*  Smooth scroll
+ *  (F.F., Chrome & Opera only)
+ ******************/
+
+html {
+  scroll-behavior: smooth;
+  /* TODO: polyfill/js solution */
+}
+
+/*  Internal link
+ *  Corrects for sticky header offset
+ ******************/
+
+.internal-link {
+  position: relative;
+  top: -1.8rem;
+}
+
+@media (min-width: 600px) {
+  .internal-link {
+    position: relative;
+    top: -4rem;
+  }
+}
+
+/*  Site header
+ ****************/
+
+.header {
+  position: sticky;
+  top: -5rem;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.2rem 0.8rem 0.5rem 0.8rem;
+}
+
+.header__nav {
+  order: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  margin-top: 0.3rem;
+  overflow: hidden;
+}
+
+.header__nav-list {
+  text-align: center;
+  white-space: nowrap;
+  border-top: 1.5px solid #d7d7d7;
+}
+
+.header__nav-list-item {
+  display: inline-block;
+}
+
+.header__nav-link {
+  display: inline-block;
+  padding: 0.8rem 0.7rem 0.6rem 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header__icon {
+  width: 155px;
+  flex-basis: 50%;
+}
+
+.header__icon-img {
+  height: 3.2rem;
+  width: auto;
+  max-width: 130px;
+}
+
+@media (min-width: 600px) {
+  .header {
+    top: 0;
+  }
+
+  .header__container {
+    flex-wrap: nowrap;
+  }
+
+  .header__nav {
+    flex-basis: 0;
+    order: unset;
+    overflow: visible;
+  }
+
+  .header__nav-list {
+    border-top: none;
+  }
+}
+
+/*  Cart
+ *********/
+
+.cart {
+  text-align: right;
+  position: relative;
+}
+
+.cart__size {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 1.2rem;
+  height: 1.2rem;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #f00;
+  border-radius: 50%;
+}
+
+/*  Hero
+ *********/
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 26rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/banner-girl.png) no-repeat center 30px / contain,
+    url(../images/flower-bkgd.jpg) repeat-x bottom / auto 100%;
+}
+
+.hero__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* TODO: text shadow */
+}
+
+.hero__title--l {
+  margin-top: 1rem;
+  display: block;
+  font-family: 'Playfair Display';
+  font-weight: normal;
+  font-size: 2.4rem;
+  text-transform: none;
+}
+
+/*  Main content
+ *****************/
+
+.section {
+  text-align: center;
+  padding: 4.2rem 2rem;
+}
+
+.section--full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section__heading {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.section__heading--em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.section__content {
+  line-height: 1.8;
+}
+
+/*  Shop
+ *********/
+
+.shop {
+  padding: 0;
+}
+
+.shop__grid {
+  display: grid;
+  grid-column-gap: 0.4rem;
+  grid-row-gap: 0.4rem;
+  grid-template-areas:
+    'mens mens'
+    'trends glasses'
+    'sale bags'
+    'womens womens';
+}
+
+.shop__grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 50vw;
+}
+
+.shop__grid-item--mens {
+  grid-area: mens;
+  background-image: url(../images/mens-category.jpg);
+}
+
+.shop__grid-item--trends {
+  grid-area: trends;
+  background-image: url(../images/trends-category.jpg);
+}
+
+.shop__grid-item--glasses {
+  grid-area: glasses;
+  background-image: url(../images/glasses-category.jpg);
+}
+
+.shop__grid-item--sale {
+  grid-area: sale;
+  background-image: url(../images/sale-category.jpg);
+}
+
+.shop__grid-item--bags {
+  grid-area: bags;
+  background-image: url(../images/bags-category.jpg);
+}
+
+.shop__grid-item--womens {
+  grid-area: womens;
+  background-image: url(../images/womens-category.jpg);
+}
+
+.shop__grid-item-link {
+  display: inline-block;
+  width: 100%;
+  padding: calc(12.5vw - 1rem) 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .shop__grid {
+    grid-template-areas:
+      'mens mens trends glasses'
+      'sale bags womens womens';
+  }
+  .shop__grid-item {
+    height: 25vw;
+  }
+}
+
+/*  Product list
+ *  (Carousel)
+ *****************/
+
+.product-list__item-category {
+  text-transform: uppercase;
+}
+
+.product-list__item-name {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.product-list__item-price::before {
+  content: '$';
+}
+
+.product-list__button {
+  background-color: #000;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+/*  Updates
+ ************/
+
+.updates {
+  background: url(../images/wave-bkgd.jpg) no-repeat bottom;
+}
+
+.updates__form {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.updates__form-input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 5px 120px 5px 20px;
+}
+
+.updates__form-submit {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 20px;
+}
+
+.updates__form-input,
+.updates__form-submit {
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+/*  Site footer
+ ****************/
+
+.footer {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer__contact-item {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.footer__contact-item--inline {
+  display: inline-block;
+}
+
+.footer__contact-item--link {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .footer {
+    display: flex;
+    text-align: left;
+  }
+
+  .footer__contact {
+    flex-grow: 1;
+  }
+}

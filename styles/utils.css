@@ -1,0 +1,62 @@
+/* Utility classes
+ * Reusable utility-styles
+ */
+
+/*  Layout
+ ***********/
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.container-s {
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*  Colors
+ ***********/
+
+.white {
+  color: #fff;
+}
+
+.light-grey {
+  color: #969696;
+}
+
+.link {
+  color: #e2574c;
+}
+
+.link:hover {
+  color: #b64036;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-dark-gray {
+  background-color: #242424;
+}
+
+.bg-link {
+  background-color: #e2574c;
+}
+
+.bg-link:hover {
+  background-color: #b64036;
+}
+
+/*  Accessibility
+ ******************/
+
+.sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -9999px;
+  top: -9999px;
+}
