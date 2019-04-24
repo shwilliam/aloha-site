@@ -346,7 +346,11 @@ html {
   font-family: 'Playfair Display';
   font-style: normal;
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
+}
+
+.footer__contact-item--last {
+  padding-bottom: 2.5rem;
 }
 
 .footer__contact-item--inline {
@@ -357,6 +361,19 @@ html {
   text-decoration: underline;
 }
 
+.footer__links-item {
+  display: inline-block;
+}
+
+.footer__links-icon {
+  width: 1.75rem;
+  text-align: center;
+}
+
+.footer__links-label {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .footer {
     display: flex;
@@ -365,5 +382,28 @@ html {
 
   .footer__contact {
     flex-grow: 1;
+  }
+
+  .footer__contact-item--last {
+    padding-bottom: 0.5rem;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin-right: 2rem;
+  }
+
+  .footer__links-item {
+    display: block;
+  }
+
+  .footer__links-icon {
+    margin: 0 0.25rem;
+  }
+
+  .footer__links-label {
+    display: initial;
   }
 }
