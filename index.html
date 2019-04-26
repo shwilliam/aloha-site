@@ -8,6 +8,7 @@
     <meta name="description" content="Sample homepage" />
     <meta name="keywords" content="HTML,CSS,JS" />
     <meta name="author" content="William Lindvall <w-lindvall@outlook.com>" />
+
     <link rel="stylesheet" type="text/css" href="styles/reset.css" />
 
     <!-- Font Awesome brand icons -->
@@ -29,6 +30,11 @@
     <link rel="stylesheet" type="text/css" href="styles/utils.css" />
 
     <script src="scripts/cart.js"></script>
+    <!-- Flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <header class="header bg-white">
@@ -131,13 +137,18 @@
             </span>
           </h3>
           <div class="product-list">
-            <ul id="product-list" class="product-list__container">
+            <ul
+              id="product-list"
+              class="product-list__container"
+              data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "wrapAround": true }'
+            >
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="169.00"
                 data-name="stretch-knit-dress"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/stretch-knit-dress.jpg"
                   alt="Stretch knit dress"
                 />
@@ -149,11 +160,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="89.00"
                 data-name="cotton-blue-shirt"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/cotton-blue-shirt.jpg"
                   alt="Cotton blue shirt"
                 />
@@ -165,11 +177,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="129.00"
                 data-name="checked-stretch-dress"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/checked-stretch-dress.jpg"
                   alt="Checked stretch dress"
                 />
@@ -183,11 +196,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="69.00"
                 data-name="blue-hipster-backpack"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/blue-hipster-backpack.jpg"
                   alt="Blue hipster backpack"
                 />
@@ -201,11 +215,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="89.00"
                 data-name="denim-overall-shorts"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/denim-overall-shorts.jpg"
                   alt="Denim overall shorts"
                 />
@@ -219,11 +234,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="99.00"
                 data-name="pink-dotted-dress"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/pink-dotted-dress.jpg"
                   alt="Pink dotted dress"
                 />
@@ -235,11 +251,15 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="119.00"
                 data-name="blue-silk-dress"
               >
-                <img src="images/blue-silk-dress.jpg" alt="Blue silk dress" />
+                <img
+                  class="product-list__item-img"
+                  src="images/blue-silk-dress.jpg"
+                  alt="Blue silk dress"
+                />
                 <div class="product-list__item-category">Dresses</div>
                 <h4 class="product-list__item-name link">Blue silk dress</h4>
                 <div class="product-list__item-price">119.00</div>
@@ -248,11 +268,12 @@
                 </button>
               </li>
               <li
-                class="product-list__item carousel-cell"
+                class="product-list__item"
                 data-price="39.00"
                 data-name="cotton-yellow-tshirt"
               >
                 <img
+                  class="product-list__item-img"
                   src="images/cotton-yellow-tshirt.jpg"
                   alt="Cotton yellow tshirt"
                 />
@@ -317,7 +338,9 @@
             >
               info@alohaapparel.com
             </a>
-            <div class="footer__contact-item footer__contact-item--last light-grey">
+            <div
+              class="footer__contact-item footer__contact-item--last light-grey"
+            >
               1490 W Broadway<br />
               Vancouver, BC, Canada
             </div>
@@ -335,7 +358,7 @@
           <li class="footer__links-item">
             <a href="https://twitter.com">
               <i class="fab fa-twitter footer__links-icon"></i>
-              <span class="footer__links-label">              
+              <span class="footer__links-label">
                 Twitter
               </span>
             </a>
@@ -343,7 +366,7 @@
           <li class="footer__links-item">
             <a href="https://instagram.com">
               <i class="fab fa-instagram footer__links-icon"></i>
-              <span class="footer__links-label">              
+              <span class="footer__links-label">
                 Instagram
               </span>
             </a>
@@ -357,15 +380,17 @@
             </a>
           </li>
           <li class="footer__links-item">
-            <a href="https://www.nytimes.com/2018/10/08/technology/google-plus-security-disclosure.html">
+            <a
+              href="https://www.nytimes.com/2018/10/08/technology/google-plus-security-disclosure.html"
+            >
               <i class="fab fa-google-plus-g footer__links-icon"></i>
-              <span class="footer__links-label">
-                Google<sup>+</sup>
-              </span>
+              <span class="footer__links-label"> Google<sup>+</sup> </span>
             </a>
           </li>
         </ul>
       </footer>
     </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

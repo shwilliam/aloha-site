@@ -47,6 +47,7 @@ html {
 .header {
   position: sticky;
   top: -5rem;
+  z-index: 1;
 }
 
 .header__container {
@@ -275,6 +276,19 @@ html {
  *  (Carousel)
  *****************/
 
+.product-list__container {
+  height: 455px;
+}
+
+.product-list__item {
+  width: 100%;
+}
+
+.product-list__item-img {
+  width: 280px;
+  max-width: unset;
+}
+
 .product-list__item-category {
   text-transform: uppercase;
 }
@@ -283,6 +297,7 @@ html {
   font-family: 'Playfair Display';
   font-style: normal;
   font-size: 1.5rem;
+  margin: 1.2rem 0;
   text-transform: capitalize;
 }
 
@@ -297,6 +312,19 @@ html {
   border-radius: 3rem;
   font-family: inherit;
   font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 600px) {
+  .product-list__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1240px) {
+  .product-list__item {
+    width: 25%;
+  }
 }
 
 /*  Updates
