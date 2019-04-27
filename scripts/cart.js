@@ -1,24 +1,20 @@
 'use strict'
 
 // init cart and set up listeners when DOM is ready
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   // check local storage for cart items
   const localCart = JSON.parse(localStorage.getItem('cart'))
   const cart = localCart || []
 
-  // query DOM for purchase buttons
-  const productsEl = document.getElementsByClassName('product-list__item')
-  const productList = Array.from(productsEl)
-
-  // add purchase product event listeners
-  productList.forEach(productEl => {
-    const purchaseBtn = productEl.getElementsByClassName(
-      'product-list__button',
-    )[0]
-    const { name, price } = productEl.dataset
-
-    purchaseBtn.addEventListener('click', () => purchaseItem(name, price))
-  })
+  document.getElementById('product-list')
+    .addEventListener('click', e => {
+      // click target is a button
+      if (e.target && e.target.nodeName === 'BUTTON') {
+        const listEl = e.target.parentNode
+        const { name, price } = listEl.dataset
+        purchaseItem(name, price)
+      }
+    })
 
   // update cart icon in case local cart exists
   updateCartIcon(cart.length)
@@ -40,7 +36,6 @@ window.addEventListener('load', () => {
       ({ tagName }) => tagName !== 'IMG',
     )[0]
 
-    // if cart size icon not found
     if (!notificationEl) {
       // create cart size icon
       notificationEl = document.createElement('span')
@@ -62,4 +57,3 @@ window.addEventListener('load', () => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }
 })
-

@@ -1,17 +1,14 @@
 'use strict'
 
 // set up listeners when DOM is ready
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   // query DOM for internal links
-  const linkEls = Array.from(
-    document.querySelectorAll('[data-scroll-to]')
-  )
-  
-  // add click event listeners
-  linkEls.forEach(el => {
-    el.addEventListener('click', () => {
-      document.querySelector(el.dataset.scrollTo)
-        .scrollIntoView({behavior: 'smooth', block: 'center'})
+  document.getElementById('internal-links')
+    .addEventListener('click', e => {
+      // click target is a button
+      if (e.target && e.target.dataset && e.target.dataset.scrollTo) {
+        document.querySelector(e.target.dataset.scrollTo)
+          .scrollIntoView({behavior: 'smooth', block: 'center'})
+      }
     })
-  })
 })
