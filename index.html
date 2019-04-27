@@ -8,6 +8,8 @@
     <meta name="description" content="Sample homepage" />
     <meta name="keywords" content="HTML,CSS,JS" />
     <meta name="author" content="William Lindvall <w-lindvall@outlook.com>" />
+
+    <!-- CSS reset -->
     <link rel="stylesheet" type="text/css" href="styles/reset.css" />
 
     <!-- Font Awesome brand icons -->
@@ -24,11 +26,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- Site styles -->
     <link rel="stylesheet" type="text/css" href="fonts/index.css" />
     <link rel="stylesheet" type="text/css" href="styles/index.css" />
     <link rel="stylesheet" type="text/css" href="styles/utils.css" />
 
-    <!-- Flickity -->
+    <!-- Flickity styles -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
@@ -100,20 +103,20 @@
             </span>
           </h2>
         </header>
-        <section id="about" class="section">
-          <h3 class="section__heading">
+        <section id="about" class="main-section">
+          <h3 class="main-section__heading">
             Hand-Crafted
-            <span class="section__heading--em">
+            <span class="main-section__heading--em">
               Styles
             </span>
           </h3>
-          <p class="container-s section__content">
+          <p class="container-s main-section__content">
             Aloha Apparel Co. sells only the finest ready-to-travel clothing.
             Browse our current selection of products or sign-up for updates
             below.
           </p>
         </section>
-        <section id="shop" class="section shop">
+        <section id="shop" class="main-section shop">
           <h3 class="sr-only">Hand-Crafted Styles</h3>
           <ul class="shop__grid text-shadow">
             <li class="shop__grid-item shop__grid-item--mens">
@@ -148,172 +151,172 @@
             </li>
           </ul>
         </section>
-        <section id="featured" class="section section--full">
-          <h3 class="section__heading">
+        <section id="featured" class="main-section main-section--full">
+          <h3 class="main-section__heading">
             Most-Loved
-            <span class="section__heading--em">
+            <span class="main-section__heading--em">
               Products
             </span>
           </h3>
-            <ul
-              id="product-list"
-              class="product-list"
-              data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "wrapAround": true }'
+          <ul
+            id="product-list"
+            class="product-list"
+            data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "wrapAround": true }'
+          >
+            <li
+              class="product-list__item"
+              data-price="169.00"
+              data-name="stretch-knit-dress"
             >
-              <li
-                class="product-list__item"
-                data-price="169.00"
-                data-name="stretch-knit-dress"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/stretch-knit-dress.jpg"
-                  alt="Stretch knit dress"
-                />
-                <div class="product-list__item-category">Dresses</div>
-                <h4 class="product-list__item-name link">Stretch knit dress</h4>
-                <div class="product-list__item-price">169.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="89.00"
-                data-name="cotton-blue-shirt"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/cotton-blue-shirt.jpg"
-                  alt="Cotton blue shirt"
-                />
-                <div class="product-list__item-category">Shirts</div>
-                <h4 class="product-list__item-name link">Cotton blue shirt</h4>
-                <div class="product-list__item-price">89.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="129.00"
-                data-name="checked-stretch-dress"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/checked-stretch-dress.jpg"
-                  alt="Checked stretch dress"
-                />
-                <div class="product-list__item-category">Dresses</div>
-                <h4 class="product-list__item-name link">
-                  Checked stretch dress
-                </h4>
-                <div class="product-list__item-price">129.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="69.00"
-                data-name="blue-hipster-backpack"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/blue-hipster-backpack.jpg"
-                  alt="Blue hipster backpack"
-                />
-                <div class="product-list__item-category">Bags</div>
-                <h4 class="product-list__item-name link">
-                  Blue hipster backpack
-                </h4>
-                <div class="product-list__item-price">69.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="89.00"
-                data-name="denim-overall-shorts"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/denim-overall-shorts.jpg"
-                  alt="Denim overall shorts"
-                />
-                <div class="product-list__item-category">Denim</div>
-                <h4 class="product-list__item-name link">
-                  Denim overall shorts
-                </h4>
-                <div class="product-list__item-price">89.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="99.00"
-                data-name="pink-dotted-dress"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/pink-dotted-dress.jpg"
-                  alt="Pink dotted dress"
-                />
-                <div class="product-list__item-category">Dresses</div>
-                <h4 class="product-list__item-name link">Pink dotted dress</h4>
-                <div class="product-list__item-price">99.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="119.00"
-                data-name="blue-silk-dress"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/blue-silk-dress.jpg"
-                  alt="Blue silk dress"
-                />
-                <div class="product-list__item-category">Dresses</div>
-                <h4 class="product-list__item-name link">Blue silk dress</h4>
-                <div class="product-list__item-price">119.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-              <li
-                class="product-list__item"
-                data-price="39.00"
-                data-name="cotton-yellow-tshirt"
-              >
-                <img
-                  class="product-list__item-img"
-                  src="images/cotton-yellow-tshirt.jpg"
-                  alt="Cotton yellow tshirt"
-                />
-                <div class="product-list__item-category">Shirts</div>
-                <h4 class="product-list__item-name link">
-                  Cotton yellow tshirt
-                </h4>
-                <div class="product-list__item-price">39.00</div>
-                <button type="button" class="product-list__button white">
-                  Add to Cart
-                </button>
-              </li>
-            </ul>
+              <img
+                class="product-list__item-img"
+                src="images/stretch-knit-dress.jpg"
+                alt="Stretch knit dress"
+              />
+              <div class="product-list__item-category">Dresses</div>
+              <h4 class="product-list__item-name link">Stretch knit dress</h4>
+              <div class="product-list__item-price">169.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="89.00"
+              data-name="cotton-blue-shirt"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/cotton-blue-shirt.jpg"
+                alt="Cotton blue shirt"
+              />
+              <div class="product-list__item-category">Shirts</div>
+              <h4 class="product-list__item-name link">Cotton blue shirt</h4>
+              <div class="product-list__item-price">89.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="129.00"
+              data-name="checked-stretch-dress"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/checked-stretch-dress.jpg"
+                alt="Checked stretch dress"
+              />
+              <div class="product-list__item-category">Dresses</div>
+              <h4 class="product-list__item-name link">
+                Checked stretch dress
+              </h4>
+              <div class="product-list__item-price">129.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="69.00"
+              data-name="blue-hipster-backpack"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/blue-hipster-backpack.jpg"
+                alt="Blue hipster backpack"
+              />
+              <div class="product-list__item-category">Bags</div>
+              <h4 class="product-list__item-name link">
+                Blue hipster backpack
+              </h4>
+              <div class="product-list__item-price">69.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="89.00"
+              data-name="denim-overall-shorts"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/denim-overall-shorts.jpg"
+                alt="Denim overall shorts"
+              />
+              <div class="product-list__item-category">Denim</div>
+              <h4 class="product-list__item-name link">
+                Denim overall shorts
+              </h4>
+              <div class="product-list__item-price">89.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="99.00"
+              data-name="pink-dotted-dress"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/pink-dotted-dress.jpg"
+                alt="Pink dotted dress"
+              />
+              <div class="product-list__item-category">Dresses</div>
+              <h4 class="product-list__item-name link">Pink dotted dress</h4>
+              <div class="product-list__item-price">99.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="119.00"
+              data-name="blue-silk-dress"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/blue-silk-dress.jpg"
+                alt="Blue silk dress"
+              />
+              <div class="product-list__item-category">Dresses</div>
+              <h4 class="product-list__item-name link">Blue silk dress</h4>
+              <div class="product-list__item-price">119.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+            <li
+              class="product-list__item"
+              data-price="39.00"
+              data-name="cotton-yellow-tshirt"
+            >
+              <img
+                class="product-list__item-img"
+                src="images/cotton-yellow-tshirt.jpg"
+                alt="Cotton yellow tshirt"
+              />
+              <div class="product-list__item-category">Shirts</div>
+              <h4 class="product-list__item-name link">
+                Cotton yellow tshirt
+              </h4>
+              <div class="product-list__item-price">39.00</div>
+              <button type="button" class="product-list__button white">
+                Add to Cart
+              </button>
+            </li>
+          </ul>
         </section>
-        <section id="updates" class="section updates white">
-          <h3 class="section__heading text-shadow">
+        <section id="updates" class="main-section updates white">
+          <h3 class="main-section__heading text-shadow">
             Sign-up for
-            <span class="section__heading--em">
+            <span class="main-section__heading--em">
               Updates
             </span>
           </h3>
-          <p class="section__content container-s">
+          <p class="main-section__content container-s">
             Stay updated on our latest product releases, be first to find out
             about upcoming sales, and get free style tips from our blog.
             Unsubscribe at any time.
@@ -334,7 +337,7 @@
         </section>
       </article>
     </main>
-    <div class="section bg-dark-gray white">
+    <div class="main-section bg-dark-gray white">
       <footer class="footer container">
         <div class="footer__contact">
           <p class="footer__contact-item">
@@ -400,16 +403,21 @@
               href="https://www.nytimes.com/2018/10/08/technology/google-plus-security-disclosure.html"
             >
               <i class="fab fa-google-plus-g footer__links-icon"></i>
-              <span class="footer__links-label"> Google<sup>+</sup> </span>
+              <span class="footer__links-label">
+                Google<sup>+</sup>
+              </span>
             </a>
           </li>
         </ul>
       </footer>
     </div>
 
+    <!-- Flickity script -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="scripts/cart.js"></script>
+
+    <!-- Site scripts  -->
     <script src="scripts/scroll-to.js"></script>
+    <script src="scripts/cart.js"></script>
     <script src="scripts/mailing-list.js"></script>
   </body>
 </html>
