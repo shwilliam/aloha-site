@@ -48,16 +48,40 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-list-item">
-              <a href="#about" class="header__nav-link link">About</a>
+              <span
+                data-scroll-to="#about"
+                role="link"
+                class="header__nav-link link"
+              >
+                About
+              </span>
             </li>
             <li class="header__nav-list-item">
-              <a href="#shop" class="header__nav-link link">Shop</a>
+              <span
+                data-scroll-to="#shop"
+                role="link"
+                class="header__nav-link link"
+              >
+                Shop
+              </span>
             </li>
             <li class="header__nav-list-item">
-              <a href="#featured" class="header__nav-link link">Featured</a>
+              <span
+                data-scroll-to="#featured"
+                role="link"
+                class="header__nav-link link"
+              >
+                Featured
+              </span>
             </li>
             <li class="header__nav-list-item">
-              <a href="#updates" class="header__nav-link link">Updates</a>
+              <span
+                data-scroll-to="#updates"
+                role="link"
+                class="header__nav-link link"
+              >
+                Updates
+              </span>
             </li>
           </ul>
         </nav>
@@ -76,8 +100,7 @@
             </span>
           </h2>
         </header>
-        <section class="section">
-          <a class="internal-link" id="about"></a>
+        <section id="about" class="section">
           <h3 class="section__heading">
             Hand-Crafted
             <span class="section__heading--em">
@@ -90,8 +113,7 @@
             below.
           </p>
         </section>
-        <section class="section shop">
-          <a class="internal-link" id="shop"></a>
+        <section id="shop" class="section shop">
           <h3 class="sr-only">Hand-Crafted Styles</h3>
           <ul class="shop__grid text-shadow">
             <li class="shop__grid-item shop__grid-item--mens">
@@ -126,8 +148,7 @@
             </li>
           </ul>
         </section>
-        <section class="section section--full">
-          <a class="internal-link" id="featured"></a>
+        <section id="featured" class="section section--full">
           <h3 class="section__heading">
             Most-Loved
             <span class="section__heading--em">
@@ -285,8 +306,7 @@
               </li>
             </ul>
         </section>
-        <section class="section updates white">
-          <a class="internal-link" id="updates"></a>
+        <section id="updates" class="section updates white">
           <h3 class="section__heading text-shadow">
             Sign-up for
             <span class="section__heading--em">
@@ -389,5 +409,6 @@
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="scripts/cart.js"></script>
+    <script src="scripts/scroll-to.js"></script>
   </body>
 </html>

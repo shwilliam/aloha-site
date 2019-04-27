@@ -17,31 +17,6 @@ html {
   }
 }
 
-/*  Smooth scroll
- *  (F.F., Chrome & Opera only)
- ******************/
-
-html {
-  scroll-behavior: smooth;
-  /* TODO: polyfill/js solution */
-}
-
-/*  Internal link
- *  Corrects for sticky header offset
- ******************/
-
-.internal-link {
-  position: relative;
-  top: -1.8rem;
-}
-
-@media (min-width: 600px) {
-  .internal-link {
-    position: relative;
-    top: -4rem;
-  }
-}
-
 /*  Site header
  ****************/
 
@@ -77,6 +52,7 @@ html {
 
 .header__nav-list-item {
   display: inline-block;
+  cursor: pointer;
 }
 
 .header__nav-link {
