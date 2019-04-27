@@ -10,6 +10,15 @@ window.addEventListener('DOMContentLoaded', () => {
   formEl.addEventListener('submit', e => {
     e.preventDefault()
     alert('Thanks for subscribing!')
+
+    const successEl = document.createElement('p')
+    successEl.innerText = 'Thanks for subscribing!'
+    successEl.classList.add('updates__success')
+    formEl.parentNode.replaceChild(successEl, formEl)
+
+    setTimeout(() => {
+      successEl.style.opacity = 1
+    }, 400)
   })
 
   // validate email on input
