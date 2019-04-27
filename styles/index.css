@@ -8,6 +8,7 @@ html {
   font-weight: 300;
   font-size: 14px;
   color: #2d2d2d;
+  min-width: 340px;
 }
 
 @media (min-width: 600px) {
@@ -68,6 +69,10 @@ html {
   text-align: center;
   white-space: nowrap;
   border-top: 1.5px solid #d7d7d7;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .header__nav-list-item {
@@ -76,7 +81,7 @@ html {
 
 .header__nav-link {
   display: inline-block;
-  padding: 0.8rem 0.7rem 0.6rem 0.7rem;
+  padding: 0.8rem 0.8rem 0.6rem 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -102,13 +107,15 @@ html {
   }
 
   .header__nav {
-    flex-basis: 0;
+    flex-basis: 45%;
     order: unset;
     overflow: visible;
   }
 
   .header__nav-list {
     border-top: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -171,7 +178,7 @@ html {
 
 .section {
   text-align: center;
-  padding: 4.2rem 2rem;
+  padding: 4.2rem 1.4rem;
 }
 
 .section--full {
@@ -183,7 +190,7 @@ html {
   font-family: 'Playfair Display';
   font-style: italic;
   font-size: 2.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .section__heading--em {
@@ -193,6 +200,8 @@ html {
 
 .section__content {
   line-height: 1.8;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
 }
 
 /*  Shop
@@ -224,32 +233,38 @@ html {
 
 .shop__grid-item--mens {
   grid-area: mens;
-  background-image: url(../images/mens-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/mens-category.jpg);
 }
 
 .shop__grid-item--trends {
   grid-area: trends;
-  background-image: url(../images/trends-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/trends-category.jpg);
 }
 
 .shop__grid-item--glasses {
   grid-area: glasses;
-  background-image: url(../images/glasses-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/glasses-category.jpg);
 }
 
 .shop__grid-item--sale {
   grid-area: sale;
-  background-image: url(../images/sale-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/sale-category.jpg);
 }
 
 .shop__grid-item--bags {
   grid-area: bags;
-  background-image: url(../images/bags-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/bags-category.jpg);
 }
 
 .shop__grid-item--womens {
   grid-area: womens;
-  background-image: url(../images/womens-category.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/womens-category.jpg);
 }
 
 .shop__grid-item-link {
@@ -276,8 +291,8 @@ html {
  *  (Carousel)
  *****************/
 
-.product-list__container {
-  height: 455px;
+.product-list {
+  height: 435px;
 }
 
 .product-list__item {
@@ -297,7 +312,7 @@ html {
   font-family: 'Playfair Display';
   font-style: normal;
   font-size: 1.5rem;
-  margin: 1.2rem 0;
+  margin: 0.8rem 0;
   text-transform: capitalize;
 }
 
@@ -313,6 +328,7 @@ html {
   font-family: inherit;
   font-weight: 600;
   margin: 1.5rem 0;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -331,21 +347,25 @@ html {
  ************/
 
 .updates {
-  background: url(../images/wave-bkgd.jpg) no-repeat bottom;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/wave-bkgd.jpg) no-repeat bottom;
+  margin-bottom: 0.5rem;
 }
 
 .updates__form {
   position: relative;
-  margin: 0 auto;
-  width: 50%;
+  width: 95%;
+  max-width: 300px;
+  margin: 2rem auto 3.2rem auto;
 }
 
 .updates__form-input {
+  color: #7e7e7e;
   position: absolute;
   left: 0;
   right: 0;
   width: 100%;
-  padding: 5px 120px 5px 20px;
+  padding: 7px 120px 7px 20px;
 }
 
 .updates__form-submit {
@@ -353,13 +373,20 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 5px 20px;
+  padding: 7px 20px;
+  cursor: pointer;
 }
 
 .updates__form-input,
 .updates__form-submit {
-  border: 3px solid white;
+  border: 2px solid white;
   border-radius: 20px;
+}
+
+@media (min-width: 600px) {
+  .updates__form {
+    width: 80%;
+  }
 }
 
 /*  Site footer
