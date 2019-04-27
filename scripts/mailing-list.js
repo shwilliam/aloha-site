@@ -27,8 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
       case true: // invalid email
         inputEl.setCustomValidity('Please make sure you provide a valid e-mail')
         break
-      default:
-        // valid email
+      default: // valid email
         inputEl.value && inputEl.value.length < 10
           ? inputEl.setCustomValidity('Hmmm... That e-mail looks a bit short.')
           : inputEl.setCustomValidity('')
