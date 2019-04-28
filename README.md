@@ -11,6 +11,8 @@ A simple one-page website made without build tools, styled to reflect the follow
 
 This project uses a [BEM](http://getbem.com/introduction/)-ish approach when it comes to styling, with several exceptions. The project makes use of a CSS reset for a general, low-specificity reset of common cross-browser/CSS issues, as well as a few utility classes (eg. for layout containers & text colors). Modifier classes have also been used within their element for convenience, as opposed to on the same element, for example when styling a part of single heading tag.
 
+If JavaScript is not enabled, an additional CSS file, is loaded that corrects some styling and hides elements that depend on JS.
+
 ## Interactivity
 
 A majority of this project's interactive functionality was required to be repeated across many elements. For these, delegated event handlers are used on container elements to listen & filter its events.

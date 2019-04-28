@@ -1,0 +1,28 @@
+/* Styles for users with disabled JS */
+
+/* Fix product list carousel
+ ****************************/
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+/* Center logo
+ ***************/
+
+.header__icon {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+/* Hide elements that depend on JS
+ **********************************/
+
+.cart,
+.product-list__button,
+.header__nav,
+.updates {
+  display: none;
+}
