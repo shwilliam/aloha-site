@@ -4,7 +4,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   // query DOM for mailing list form & input
   const formEl = document.getElementById('mailing-list')
-  const inputEl = document.getElementById('email-input')
+  const inputEl = formEl['email-input']
 
   // alert message on submit event listener
   formEl.addEventListener('submit', e => {
