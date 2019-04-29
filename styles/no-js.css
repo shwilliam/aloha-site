@@ -9,20 +9,12 @@
   height: auto;
 }
 
-/* Center logo
- ***************/
-
-.header__icon {
-  flex-basis: 100%;
-  text-align: center;
-}
-
 /* Hide elements that depend on JS
  **********************************/
 
 .cart,
 .product-list__button,
-.header__nav,
-.updates {
+.updates,
+.header__nav-list-item--js {
   display: none;
 }
