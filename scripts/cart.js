@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // update cart size
     notificationEl.innerText =
       // replace number w/ '+' if double-digit
-      cartSize < 10 ? cartSize : '+'
+      cartSize < 10 ? `${cartSize} items in cart` : '+ 10 items in cart'
   }
 
   // update local storage w/ cart arr
