@@ -1,6 +1,6 @@
 'use strict'
 
-// init cart and set up listeners when DOM is ready
+// set up listeners when DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
   // check local storage for cart items
   const localCart = JSON.parse(localStorage.getItem('cart'))
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function updateCartIcon(cartSize) {
     if (!cartSize) return
 
-    // query FOM for cart elements
+    // query DOM for cart elements
     const cartEl = document.getElementById('cart')
     const cartChildren = Array.from(cartEl.children)
     let notificationEl = cartChildren.filter(

@@ -6,16 +6,20 @@ window.addEventListener('DOMContentLoaded', () => {
   const formEl = document.getElementById('mailing-list')
   const inputEl = formEl['email-input']
 
-  // alert message on submit event listener
+  // alert message on submit
   formEl.addEventListener('submit', e => {
     e.preventDefault()
     alert('Thanks for subscribing!')
 
+    // create success el
     const successEl = document.createElement('p')
     successEl.innerText = 'Thanks for subscribing!'
     successEl.classList.add('updates__success')
+
+    // replace form with success el
     formEl.parentNode.replaceChild(successEl, formEl)
 
+    // fade in success el
     setTimeout(() => {
       successEl.style.opacity = 1
     }, 400)
