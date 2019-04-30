@@ -37,6 +37,10 @@
   color: #b64036;
 }
 
+.link--no-hover:hover {
+  color: #e2574c;
+}
+
 .bg-white {
   background-color: #fff;
 }

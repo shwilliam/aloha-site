@@ -413,6 +413,11 @@ html {
   display: inline-block;
 }
 
+.footer__links-item:hover .footer__links-icon,
+.footer__contact-item--link:hover {
+  color: #b64036;
+}
+
 .footer__links-icon {
   width: 1.75rem;
   text-align: center;
