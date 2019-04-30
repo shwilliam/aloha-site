@@ -15,7 +15,7 @@ If JavaScript is not enabled, an additional CSS file is loaded that corrects som
 
 ## Interactivity
 
-Interactive elements are generally accessible with keyboard navigation, with an exception being the carousel that does not bring focused items into view. ARIA attributes have been used on several elements to communicate additional information about their functionality when necessary, and used to notify screen-reader users of changes to content.
+Interactive elements are generally accessible with keyboard navigation, with an exception being the carousel that does not bring focused items into view. The `aria-live` attribute has been used to appropriately notify screen-reader users of changes to DOM content.
 
 A majority of this project's interactive functionality was required to be repeated across many elements. For these, delegated event handlers are used on container elements to listen & filter its events.
 
