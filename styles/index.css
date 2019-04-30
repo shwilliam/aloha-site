@@ -328,7 +328,7 @@ html {
 
 .updates {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url(../images/wave-bkgd.jpg) no-repeat bottom;
+    url(../images/wave-bkgd.jpg) no-repeat left bottom / auto 200%;
   margin-bottom: 0.5rem;
 }
 
@@ -375,6 +375,10 @@ html {
 @media (min-width: 600px) {
   .updates__form {
     width: 80%;
+  }
+  .updates {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/wave-bkgd.jpg) no-repeat left 85% / cover;
   }
 }
 
