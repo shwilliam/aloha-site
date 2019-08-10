@@ -29,11 +29,16 @@ window.addEventListener('DOMContentLoaded', () => {
   inputEl.addEventListener('input', e => {
     switch (inputEl.validity.typeMismatch) {
       case true: // invalid email
-        inputEl.setCustomValidity('Please make sure you provide a valid e-mail')
+        inputEl.setCustomValidity(
+          'Please make sure you provide a valid e-mail',
+        )
         break
-      default: // valid email
-        inputEl.value && inputEl.value.length < 10
-          ? inputEl.setCustomValidity('Hmmm... That e-mail looks a bit short.')
+      default:
+        // valid email
+        inputEl.value && inputEl.value.length < 5
+          ? inputEl.setCustomValidity(
+              'Hmmm... That e-mail looks a bit short.',
+            )
           : inputEl.setCustomValidity('')
         break
     }
